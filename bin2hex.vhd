@@ -52,4 +52,4 @@ begin
         when "1111" =>
             y <= "0111000"; -- F
 
-end architecture bin2hex;
+end architecture bin2hexa;

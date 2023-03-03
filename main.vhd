@@ -14,7 +14,7 @@ entitty main is
         HEX4: out std_logic_vector(6 downto 0);
         HEX5: out std_logic_vector(6 downto 0);
         HEX6: out std_logic_vector(6 downto 0);
-        HEX7: out std_logic_vector(6 downto 0);
+        HEX7: out std_logic_vector(6 downto 0)
          );
      );
 end entity main;
@@ -73,7 +73,35 @@ architecture main_a of main is
 	end component or_3;
 
     -- niesprawdzone
-   
+
+	component and_4 is
+		port (
+			a: in std_logic;
+			b: in std_logic;
+			c: in std_logic;
+			d: in std_logic;
+			y: out std_logic
+		);
+	end component and_4;
+
+	component or_4 is
+		port (
+			a: in std_logic;
+			b: in std_logic;
+			c: in std_logic;
+			d: in std_logic;
+			y: out std_logic
+		);
+	end component or_4;
+    
+	component xor_2 is
+		port (
+			a: in std_logic;
+			b: in std_logic;
+			y: out std_logic
+		);
+	end component xor_2;
+	
     component mux2 is
         port (
             a: in std_logic;
@@ -100,7 +128,7 @@ architecture main_a of main is
             d: in std_logic_vector(7 downto 0);
 
             s: in std_logic_vector(1 downto 0);
-            y: out std_logic_vector(7 downto 0);
+            y: out std_logic_vector(7 downto 0)
             );
     end component mux4v;
 
